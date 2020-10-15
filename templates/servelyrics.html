@@ -1,0 +1,126 @@
+{% extends "layouts/base.html" %}
+
+{% block serve_lyrics %}
+
+    <div class="wrapper">
+    <div class="container">
+
+        <div class="row">
+            <h4> 1. Choose an artist </h4>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="slider">
+                    <div class="slide" id="slide-1">
+                        <button class="btn btn-default" type="submit" id="1" value="Journey">Journey</button>
+                    </div>
+                    <div class="divider">&nbsp</div>
+                    <div class="slide" id="slide-2">
+                        <button class="btn btn-default" type="submit" id="2" value="Oasis">Oasis</button>
+                    </div>
+                    <div class="divider">&nbsp</div>
+                    <div class="slide" id="slide-3">
+                        <button class="btn btn-default" type="submit" id="3" value="Taylor Swift">Taylor Swift</button>
+                    </div>
+                    <div class="divider">&nbsp</div>
+                    <div class="slide" id="slide-3">
+                        <button class="btn btn-default" type="submit" id="4" value="Subways">Bubways</button>
+                    </div>
+                    <div class="divider">&nbsp</div>
+                    <div class="slide" id="slide-3">
+                        <button class="btn btn-default" type="submit" id="5" value="Subways">Bubways</button>
+                    </div>
+                    <div class="divider">&nbsp</div>
+                    <div class="slide" id="slide-3">
+                        <button class="btn btn-default" type="submit" id="6" value="Subways">Bubways</button>
+                    </div>
+                    <div class="divider">&nbsp</div>
+                    <div class="slide" id="slide-3">
+                        <button class="btn btn-default" type="submit" id="7" value="Subways">Bubways</button>
+                    </div>
+                    <div class="divider">&nbsp</div>
+                    <div class="slide" id="slide-3">
+                        <button class="btn btn-default" type="submit" id="8" value="Subways">Bubways</button>
+                    </div>
+                    <div class="divider">&nbsp</div>
+                    <div class="slide" id="slide-3">
+                        <button class="btn btn-default" type="submit" id="9" value="Subways">Bubways</button>
+                    </div>
+                    <div class="divider">&nbsp</div>
+                    <div class="slide" id="slide-3">
+                        <button class="btn btn-default" type="submit" id="10" value="Subways">Bubways</button>
+                    </div>
+                </div>
+            </div>
+
+        <div class="col-md-3">
+            <input type="text" class="form-control" id="search_artist" onkeyup="search_artist()" placeholder="Search for names..">
+        </div>
+
+
+        <div class="col-md-3">
+            <!-- Form to make artist request saved in db -->
+            <form action="/request" method="get" class="form-inline float-sm-right">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="who" id="who" placeholder="Request an artist">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        </div>
+        <div class="row" id="confirm"></div>
+    </div>
+    </div>
+
+
+    <div class="text-center" id="displaysong"></div>
+
+    <script type="text/javascript">
+        $("button").click(function() {
+            // load gif
+            var loader = document.createElement('div');
+            loader.setAttribute('id', 'loader');
+            document.body.appendChild(loader);
+
+            var fired_button = $(this).val();
+
+            // POST
+            fetch('/pyjstalk', {
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                method: 'POST',
+                // JSON payload
+                body: JSON.stringify({
+                    "artist": fired_button
+                })
+            }).then(function (response) {
+                return response.json();
+            }).then(function (json) {
+
+                var confirmation = document.createElement("H4");
+                confirmation.innerText = "2. Write a hit song in the style of " + String(fired_button);
+                document.getElementById("confirm").appendChild(confirmation);
+
+                var song = [json['verse_one'], json['chorus'], json['verse_two'], json['chorus']];
+                var parts = ["Verse One", "Chorus", "Verse Two", "Chorus"]
+                for (let i = 0; i < song.length; i++) {
+                    var part = document.createElement("P");
+                    part.innerHTML = '<strong>' + parts[i] + '</strong>';
+                    document.getElementById("displaysong").appendChild(part);
+                    for (let j = 0; j < song[i].length; j++) {
+                        var para = document.createElement("P");
+                        para.innerText = song[i][j];
+                        document.getElementById("displaysong").appendChild(para);
+                    }
+                }
+                loader.style.display = 'none';
+                console.log('POST response: ');
+                console.log(json);
+            });
+        });
+    </script>
+
+{% endblock %}

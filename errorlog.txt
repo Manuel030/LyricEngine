@@ -1,0 +1,876 @@
+Exception on /request [GET]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 34, in request_artist
+    password = "yqOqvU9NW2yV1GiWcdrK"
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\psycopg2\__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 543?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 543?
+
+Exception on /lyrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 71, in generate_lyrics
+    model = tf.keras.models.load_model('static/{}/{}_model.h5'.format(artist, artist))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\saving\save.py", line 146, in load_model
+    return hdf5_format.load_model_from_hdf5(filepath, custom_objects, compile)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\saving\hdf5_format.py", line 184, in load_model_from_hdf5
+    training_config, custom_objects))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\tracking\base.py", line 457, in _method_wrapper
+    result = method(self, *args, **kwargs)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 409, in compile
+    self.loss, self.output_names)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training_utils.py", line 1447, in prepare_loss_functions
+    loss_functions = [get_loss_function(loss) for _ in output_names]
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training_utils.py", line 1447, in <listcomp>
+    loss_functions = [get_loss_function(loss) for _ in output_names]
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training_utils.py", line 1181, in get_loss_function
+    loss_fn = losses.get(loss)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\losses.py", line 1184, in get
+    return deserialize(identifier)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\losses.py", line 1175, in deserialize
+    printable_module_name='loss function')
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\utils\generic_utils.py", line 322, in deserialize_keras_object
+    raise ValueError('Unknown ' + printable_module_name + ':' + object_name)
+ValueError: Unknown loss function:loss
+Exception on /lyrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 71, in generate_lyrics
+    model = tf.keras.models.load_model('static/{}/{}_model.h5'.format(artist, artist))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\saving\save.py", line 146, in load_model
+    return hdf5_format.load_model_from_hdf5(filepath, custom_objects, compile)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\saving\hdf5_format.py", line 184, in load_model_from_hdf5
+    training_config, custom_objects))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\tracking\base.py", line 457, in _method_wrapper
+    result = method(self, *args, **kwargs)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 409, in compile
+    self.loss, self.output_names)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training_utils.py", line 1447, in prepare_loss_functions
+    loss_functions = [get_loss_function(loss) for _ in output_names]
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training_utils.py", line 1447, in <listcomp>
+    loss_functions = [get_loss_function(loss) for _ in output_names]
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training_utils.py", line 1181, in get_loss_function
+    loss_fn = losses.get(loss)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\losses.py", line 1184, in get
+    return deserialize(identifier)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\losses.py", line 1175, in deserialize
+    printable_module_name='loss function')
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\utils\generic_utils.py", line 322, in deserialize_keras_object
+    raise ValueError('Unknown ' + printable_module_name + ':' + object_name)
+ValueError: Unknown loss function:loss
+Exception on /lyrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 96, in generate_lyrics
+    return render_template('lyricpage.html',verse_one = verse_one,
+NameError: name 'verse_one' is not defined
+Exception on /lyrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 96, in generate_lyrics
+    verse_one = generate_text(model, s, 300)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\text_generation.py", line 37, in generate_text
+    return start_string + ''.join(text_generated)
+TypeError: can only concatenate list (not "str") to list
+Exception on /lyrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 96, in generate_lyrics
+    verse_one = generate_text(model, s, 300)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\text_generation.py", line 37, in generate_text
+    return (start_string + ''.join(text_generated))
+TypeError: can only concatenate list (not "str") to list
+Exception on /lyrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 96, in generate_lyrics
+    verse_one = generate_text(model, s, 300)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\text_generation.py", line 37, in generate_text
+    return (start_string + ''.join(text_generated))
+TypeError: can only concatenate list (not "str") to list
+Exception on /lyrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 86, in generate_lyrics
+    model = RNNmodel(len(vocabulary.vocab), 256, 1024, batch_size=1)
+TypeError: 'module' object is not callable
+Exception on /lyrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 86, in generate_lyrics
+    model = RNNmodel.RNNmodel(len(vocabulary.vocab), 256, 1024, batch_size=1)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\RNNmodel.py", line 8, in __init__
+    self.embedding = tf.kerasd.layers.Embedding(self.vocab_size, self.embedding_dim, batch_input_shape=[self.batch_size, None])
+AttributeError: module 'tensorflow' has no attribute 'kerasd'
+Exception on /lyrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 86, in generate_lyrics
+    model = RNNmodel.RNNmodel(len(vocabulary.vocab), 256, 1024, batch_size=1)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\RNNmodel.py", line 8, in __init__
+    self.embedding = tf.keras.layers.Embedding(self.vocab_size, self.embedding_dim, batch_input_shape=[self.batch_size, None])
+AttributeError: 'RNNmodel' object has no attribute 'vocab_size'
+Exception on /lyrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 86, in generate_lyrics
+    model = RNNmodel.RNNmodel(len(vocabulary.vocab), 256, 1024, batch_size=1)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\RNNmodel.py", line 9, in __init__
+    self.gru = tf.keras.layers.GRU(rnn_units, return_sequences=True, stateful=True, recurrent_initializer='glorot-uniform')
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\layers\recurrent_v2.py", line 364, in __init__
+    **kwargs)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\layers\recurrent.py", line 1084, in __init__
+    super(DropoutRNNCellMixin, self).__init__(*args, **kwargs)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\layers\recurrent.py", line 2043, in __init__
+    trainable=kwargs.get('trainable', True))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\layers\recurrent.py", line 1709, in __init__
+    self.recurrent_initializer = initializers.get(recurrent_initializer)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\initializers.py", line 203, in get
+    return deserialize(identifier)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\initializers.py", line 186, in deserialize
+    printable_module_name='initializer')
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\utils\generic_utils.py", line 322, in deserialize_keras_object
+    raise ValueError('Unknown ' + printable_module_name + ':' + object_name)
+ValueError: Unknown initializer:glorot-uniform
+Exception on /lyrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 90, in generate_lyrics
+    model.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 234, in load_weights
+    return super(Model, self).load_weights(filepath, by_name, skip_mismatch)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1204, in load_weights
+    status.assert_nontrivial_match()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\tracking\util.py", line 805, in assert_nontrivial_match
+    (self._graph_view.root,))
+AssertionError: Nothing to load. No dependencies have been added to <RNNmodel.RNNmodel object at 0x000001D7C5A5E208> yet.
+Exception on /lyrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 90, in generate_lyrics
+    model.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 234, in load_weights
+    return super(Model, self).load_weights(filepath, by_name, skip_mismatch)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1204, in load_weights
+    status.assert_nontrivial_match()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\tracking\util.py", line 805, in assert_nontrivial_match
+    (self._graph_view.root,))
+AssertionError: Nothing to load. No dependencies have been added to <RNNmodel.RNNmodel object at 0x000002A6AD2BE278> yet.
+Exception on /lyrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 77, in generate_lyrics
+    rnn.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 234, in load_weights
+    return super(Model, self).load_weights(filepath, by_name, skip_mismatch)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1193, in load_weights
+    status = self._trackable_saver.restore(filepath)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\tracking\util.py", line 1283, in restore
+    checkpoint=checkpoint, proto_id=0).restore(self._graph_view.root)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\tracking\base.py", line 209, in restore
+    restore_ops = trackable._restore_from_checkpoint_position(self)  # pylint: disable=protected-access
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\tracking\base.py", line 908, in _restore_from_checkpoint_position
+    tensor_saveables, python_saveables))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\tracking\util.py", line 289, in restore_saveables
+    validated_saveables).restore(self.save_path_tensor)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\saving\functional_saver.py", line 255, in restore
+    restore_ops.update(saver.restore(file_prefix))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\saving\functional_saver.py", line 102, in restore
+    restored_tensors, restored_shapes=None)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\saving\saveable_object_util.py", line 116, in restore
+    self.handle_op, self._var_shape, restored_tensor)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\ops\resource_variable_ops.py", line 297, in shape_safe_assign_variable_handle
+    shape.assert_is_compatible_with(value_tensor.shape)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\framework\tensor_shape.py", line 1110, in assert_is_compatible_with
+    raise ValueError("Shapes %s and %s are incompatible" % (self, other))
+ValueError: Shapes (59, 256) and (59, 100) are incompatible
+Exception on /lyrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 87, in generate_lyrics
+    chorus = model.generate_text(rnn, s, 180, 0.2)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\model.py", line 65, in generate_text
+    text_generated.append(''.join(sentence_generated))
+TypeError: sequence item 0: expected str instance, list found
+Exception on /lyrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 85, in generate_lyrics
+    verse_one = model.generate_text(rnn, s, 300, 0.2)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\model.py", line 65, in generate_text
+    text_generated.append(''.join(sentence_generated))
+TypeError: sequence item 0: expected str instance, list found
+Exception on /lyrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 77, in generate_lyrics
+    rnn.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 234, in load_weights
+    return super(Model, self).load_weights(filepath, by_name, skip_mismatch)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1193, in load_weights
+    status = self._trackable_saver.restore(filepath)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\tracking\util.py", line 1283, in restore
+    checkpoint=checkpoint, proto_id=0).restore(self._graph_view.root)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\tracking\base.py", line 209, in restore
+    restore_ops = trackable._restore_from_checkpoint_position(self)  # pylint: disable=protected-access
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\tracking\base.py", line 908, in _restore_from_checkpoint_position
+    tensor_saveables, python_saveables))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\tracking\util.py", line 289, in restore_saveables
+    validated_saveables).restore(self.save_path_tensor)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\saving\functional_saver.py", line 255, in restore
+    restore_ops.update(saver.restore(file_prefix))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\saving\functional_saver.py", line 102, in restore
+    restored_tensors, restored_shapes=None)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\saving\saveable_object_util.py", line 116, in restore
+    self.handle_op, self._var_shape, restored_tensor)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\ops\resource_variable_ops.py", line 297, in shape_safe_assign_variable_handle
+    shape.assert_is_compatible_with(value_tensor.shape)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\framework\tensor_shape.py", line 1110, in assert_is_compatible_with
+    raise ValueError("Shapes %s and %s are incompatible" % (self, other))
+ValueError: Shapes (2048,) and (2, 1536) are incompatible
+Exception on /lyrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 77, in generate_lyrics
+    rnn.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 234, in load_weights
+    return super(Model, self).load_weights(filepath, by_name, skip_mismatch)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1193, in load_weights
+    status = self._trackable_saver.restore(filepath)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\tracking\util.py", line 1283, in restore
+    checkpoint=checkpoint, proto_id=0).restore(self._graph_view.root)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\tracking\base.py", line 209, in restore
+    restore_ops = trackable._restore_from_checkpoint_position(self)  # pylint: disable=protected-access
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\tracking\base.py", line 908, in _restore_from_checkpoint_position
+    tensor_saveables, python_saveables))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\tracking\util.py", line 289, in restore_saveables
+    validated_saveables).restore(self.save_path_tensor)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\saving\functional_saver.py", line 255, in restore
+    restore_ops.update(saver.restore(file_prefix))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\saving\functional_saver.py", line 102, in restore
+    restored_tensors, restored_shapes=None)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\saving\saveable_object_util.py", line 116, in restore
+    self.handle_op, self._var_shape, restored_tensor)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\ops\resource_variable_ops.py", line 297, in shape_safe_assign_variable_handle
+    shape.assert_is_compatible_with(value_tensor.shape)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\framework\tensor_shape.py", line 1110, in assert_is_compatible_with
+    raise ValueError("Shapes %s and %s are incompatible" % (self, other))
+ValueError: Shapes (2048,) and (2, 1536) are incompatible
+Exception on /pyjstalk [POST]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1967, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2130, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a list.
+Exception on /pyjstalk [POST]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 35, in pyjstalk
+    rnn.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 234, in load_weights
+    return super(Model, self).load_weights(filepath, by_name, skip_mismatch)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1183, in load_weights
+    if _is_hdf5_filepath(filepath):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1500, in _is_hdf5_filepath
+    return (filepath.endswith('.h5') or filepath.endswith('.keras') or
+AttributeError: 'NoneType' object has no attribute 'endswith'
+Exception on /pyjstalk [POST]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 34, in pyjstalk
+    rnn.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 234, in load_weights
+    return super(Model, self).load_weights(filepath, by_name, skip_mismatch)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1183, in load_weights
+    if _is_hdf5_filepath(filepath):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1500, in _is_hdf5_filepath
+    return (filepath.endswith('.h5') or filepath.endswith('.keras') or
+AttributeError: 'NoneType' object has no attribute 'endswith'
+Exception on /pyjstalk [POST]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 34, in pyjstalk
+    rnn.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 234, in load_weights
+    return super(Model, self).load_weights(filepath, by_name, skip_mismatch)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1183, in load_weights
+    if _is_hdf5_filepath(filepath):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1500, in _is_hdf5_filepath
+    return (filepath.endswith('.h5') or filepath.endswith('.keras') or
+AttributeError: 'NoneType' object has no attribute 'endswith'
+Exception on /pyjstalk [POST]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 34, in pyjstalk
+    rnn.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 234, in load_weights
+    return super(Model, self).load_weights(filepath, by_name, skip_mismatch)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1183, in load_weights
+    if _is_hdf5_filepath(filepath):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1500, in _is_hdf5_filepath
+    return (filepath.endswith('.h5') or filepath.endswith('.keras') or
+AttributeError: 'NoneType' object has no attribute 'endswith'
+Exception on /pyjstalk [POST]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 34, in pyjstalk
+    rnn.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 234, in load_weights
+    return super(Model, self).load_weights(filepath, by_name, skip_mismatch)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1183, in load_weights
+    if _is_hdf5_filepath(filepath):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1500, in _is_hdf5_filepath
+    return (filepath.endswith('.h5') or filepath.endswith('.keras') or
+AttributeError: 'NoneType' object has no attribute 'endswith'
+Exception on /pyjstalk [POST]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 34, in pyjstalk
+    rnn.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 234, in load_weights
+    return super(Model, self).load_weights(filepath, by_name, skip_mismatch)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1183, in load_weights
+    if _is_hdf5_filepath(filepath):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1500, in _is_hdf5_filepath
+    return (filepath.endswith('.h5') or filepath.endswith('.keras') or
+AttributeError: 'NoneType' object has no attribute 'endswith'
+Exception on /pyjstalk [POST]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 34, in pyjstalk
+    rnn.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 234, in load_weights
+    return super(Model, self).load_weights(filepath, by_name, skip_mismatch)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1183, in load_weights
+    if _is_hdf5_filepath(filepath):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1500, in _is_hdf5_filepath
+    return (filepath.endswith('.h5') or filepath.endswith('.keras') or
+AttributeError: 'NoneType' object has no attribute 'endswith'
+Exception on /pyjstalk [POST]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 34, in pyjstalk
+    rnn.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 234, in load_weights
+    return super(Model, self).load_weights(filepath, by_name, skip_mismatch)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1183, in load_weights
+    if _is_hdf5_filepath(filepath):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1500, in _is_hdf5_filepath
+    return (filepath.endswith('.h5') or filepath.endswith('.keras') or
+AttributeError: 'NoneType' object has no attribute 'endswith'
+Exception on /pyjstalk [POST]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 34, in pyjstalk
+    rnn.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 234, in load_weights
+    return super(Model, self).load_weights(filepath, by_name, skip_mismatch)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1183, in load_weights
+    if _is_hdf5_filepath(filepath):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1500, in _is_hdf5_filepath
+    return (filepath.endswith('.h5') or filepath.endswith('.keras') or
+AttributeError: 'NoneType' object has no attribute 'endswith'
+Exception on /pyjstalk [POST]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 36, in pyjstalk
+    rnn.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 234, in load_weights
+    return super(Model, self).load_weights(filepath, by_name, skip_mismatch)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1183, in load_weights
+    if _is_hdf5_filepath(filepath):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1500, in _is_hdf5_filepath
+    return (filepath.endswith('.h5') or filepath.endswith('.keras') or
+AttributeError: 'NoneType' object has no attribute 'endswith'
+Exception on /pyjstalk [POST]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 36, in pyjstalk
+    rnn.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 234, in load_weights
+    return super(Model, self).load_weights(filepath, by_name, skip_mismatch)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1183, in load_weights
+    if _is_hdf5_filepath(filepath):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1500, in _is_hdf5_filepath
+    return (filepath.endswith('.h5') or filepath.endswith('.keras') or
+AttributeError: 'NoneType' object has no attribute 'endswith'
+Exception on /pyjstalk [POST]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 36, in pyjstalk
+    rnn.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 234, in load_weights
+    return super(Model, self).load_weights(filepath, by_name, skip_mismatch)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1183, in load_weights
+    if _is_hdf5_filepath(filepath):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1500, in _is_hdf5_filepath
+    return (filepath.endswith('.h5') or filepath.endswith('.keras') or
+AttributeError: 'NoneType' object has no attribute 'endswith'
+Exception on /pyjstalk [POST]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 36, in pyjstalk
+    rnn.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 234, in load_weights
+    return super(Model, self).load_weights(filepath, by_name, skip_mismatch)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1183, in load_weights
+    if _is_hdf5_filepath(filepath):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1500, in _is_hdf5_filepath
+    return (filepath.endswith('.h5') or filepath.endswith('.keras') or
+AttributeError: 'NoneType' object has no attribute 'endswith'
+Exception on /pyjstalk [POST]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 33, in pyjstalk
+    rnn = model.build_model(len(vocabulary.vocab), 100, 512, batch_size=1)  # play with rnn units
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\model.py", line 19, in build_model
+    tf.keras.layers.Dense(vocab_size)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\tracking\base.py", line 457, in _method_wrapper
+    result = method(self, *args, **kwargs)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\sequential.py", line 116, in __init__
+    self.add(layer)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\training\tracking\base.py", line 457, in _method_wrapper
+    result = method(self, *args, **kwargs)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\sequential.py", line 203, in add
+    output_tensor = layer(self.outputs[0])
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\layers\recurrent.py", line 644, in __call__
+    return super(RNN, self).__call__(inputs, **kwargs)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\base_layer.py", line 814, in __call__
+    self._set_inputs(inputs, outputs)
+  File "C:\Users\Manuel\Miniconda3\lib\contextlib.py", line 119, in __exit__
+    next(self.gen)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\framework\func_graph.py", line 418, in inner_cm
+    for fn in self._scope_exit_callbacks:
+TypeError: 'NoneType' object is not iterable
+Exception on /pyjstalk [POST]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 36, in pyjstalk
+    rnn.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 234, in load_weights
+    return super(Model, self).load_weights(filepath, by_name, skip_mismatch)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1183, in load_weights
+    if _is_hdf5_filepath(filepath):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1500, in _is_hdf5_filepath
+    return (filepath.endswith('.h5') or filepath.endswith('.keras') or
+AttributeError: 'NoneType' object has no attribute 'endswith'
+Exception on /pyjstalk [POST]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 36, in pyjstalk
+    rnn.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 234, in load_weights
+    return super(Model, self).load_weights(filepath, by_name, skip_mismatch)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1183, in load_weights
+    if _is_hdf5_filepath(filepath):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1500, in _is_hdf5_filepath
+    return (filepath.endswith('.h5') or filepath.endswith('.keras') or
+AttributeError: 'NoneType' object has no attribute 'endswith'
+Exception on /pyjstalk [POST]
+Traceback (most recent call last):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\app.py", line 36, in pyjstalk
+    rnn.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 234, in load_weights
+    return super(Model, self).load_weights(filepath, by_name, skip_mismatch)
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1183, in load_weights
+    if _is_hdf5_filepath(filepath):
+  File "C:\Users\Manuel\PycharmProjects\LyricGenerator\venv\lib\site-packages\tensorflow_core\python\keras\engine\network.py", line 1500, in _is_hdf5_filepath
+    return (filepath.endswith('.h5') or filepath.endswith('.keras') or
+AttributeError: 'NoneType' object has no attribute 'endswith'

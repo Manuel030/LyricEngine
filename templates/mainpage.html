@@ -1,0 +1,56 @@
+{% extends "layouts/base.html" %}
+
+{% block main_header %}
+<div class="jumbotron">
+  <div class="container">
+      <h1>Welcome to LyricEngine </h1>
+      <h3>Get inspired by your favourite artists.</h3>
+    <p>
+        Are you ready to write lyrics in the style of musicians you love? LyricEngine is a machine learning backed
+        application to generate lyrics that help you spark your creativity. What are you waiting for?
+    </p>
+    <br />
+    <p>
+      {% block  main_menu %}
+          <!--
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Get started
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class ="dropdown-item" href="/lyrics?artist=taylor+swift">Taylor Swift</a>
+                <a class ="dropdown-item" href="/lyrics?artist=kendrick+lamar">Kendrick Lamar</a>
+            </div>
+        </div>
+        -->
+          <a class="btn btn-secondary" href="/lyrics" role="button">Get started >></a>
+          <a class="btn btn-secondary" href="/how_it_works" role="button">Learn more >></a>
+    {% endblock %}
+    </p>
+  </div>
+</div>
+{% endblock %}
+
+{% block main_info %}
+<div class="container">
+  <div class="row" id="features">
+    <div class="col-md-6">
+        <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-capslock" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M7.27 1.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-1H1.654C.78 9.5.326 8.455.924 7.816L7.27 1.047zM14.346 8.5L8 1.731 1.654 8.5H4.5a1 1 0 0 1 1 1v1h5v-1a1 1 0 0 1 1-1h2.846zm-9.846 5a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-1zm6 0h-5v1h5v-1z"/>
+        </svg>
+      <h3>Level up your songwriting</h3>
+      <p>
+        With LyricEngine's algorithm you will get original and unique lyrics that nobody heard before. Yet, they will resemble
+          the songwriting style of artists you love.
+      </p>
+    </div>
+    <div class="col-md-6">
+        <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+        </svg>
+      <h3>Free to use</h3>
+      <p>LyricEngine is completely free to use, ad-free and open source.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

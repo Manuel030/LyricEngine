@@ -1,0 +1,46 @@
+{% extends "layouts/base.html" %}
+
+{% block serve_lyrics %}
+    <div class="container">
+        <div class="row"  id="how">
+            <div class="page-header">
+                <h1>More information</h1>
+            </div>
+        </div>
+        <div class="row" id="how">
+            <h3>Create original content</h3>
+            <p>
+                LyricEngine's algorithm has been trained on song lyrics and learned to write songs in the
+                particular style of different artists. Be it rap, rock or pop music that you're interested in, LyricEngine has
+                got you covered! The generated text will always be original in a sense that in does more than simply reciting,
+                say, the Beatles. Rather, the algorithm has learned to generate new text by looking at lyrics by the Beatles.
+                Basically, we'll give the algorithm a random character to start off with and ask it to predict the next characters
+                according to a probability distribution observed in lyrics by the Beatles.
+            </p>
+            <p>
+                Bear in mind that you won't always get perfect quality lyrics ready for recording.
+                Instead, use LyricEngine as a starting point on your songwriting journey.
+            </p>
+
+            <h3>Project description</h3>
+            <p>
+                The source code can be found on GitHub [Link]. This web app runs on Flask, PostgreSQL and JavaScript.
+                The Python client <a href="https://github.com/johnwmillr/lyricsgenius">lyricsgenius</a> for the
+                <a href="genius.com">genius.com</a> API is used
+                to scrape all the textual data. LyricEngine is greatly inspired by Andrej Karpathy's
+                <a href="https://github.com/karpathy/char-rnn">char-rnn</a> and his
+                <a href="https://karpathy.github.io/2015/05/21/rnn-effectiveness/">blog post</a> about it.
+                The language model is a recurrent neural network (RNN) built in TensorFlow with a straightforward
+                architecture suited for language generation. Input characters are converted into vectors of size 100
+                to make the data ready for the subsequent multilayer long short-term memory (LSTM) recurrent network.
+                Each layer has 100 hidden cells and each hidden cell has 512 hidden units.
+                Between the LSTM layers and the final dense layer a dropout layer is used to mitigate overfitting issues.
+            </p>
+
+            <p>
+                Finally, LyricEngine generates text by initializing the RNN with a random start character and predicting
+                the next characters where each predicted character is fed back into the model so that it has more context.
+            </p>
+        </div>
+    </div>
+{% endblock %}
