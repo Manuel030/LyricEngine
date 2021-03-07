@@ -12,6 +12,3 @@ Between the LSTM layers and the final dense layer a dropout layer is used to mit
 
 Finally, LyricEngine generates text by initializing the RNN with a random start character and predicting the 
 next characters where each predicted character is fed back into the model so that it has more context.
-
-## Notes
-Currently down, I need to find a new web host.
